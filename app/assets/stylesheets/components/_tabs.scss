@@ -1,19 +1,19 @@
 #nav-tab {
   border-bottom: none !important;
-  background-color: #6D6E6A;
+  background-color: $background-gray;
   .nav-item {
-    background-color: #42433E;
+    background-color: $tabs-mid-gray;
     font-size: 12px;
     padding-left: 24px;
     padding-right: 24px;
-    color: #989898;
+    color: $tabs-font-gray;
     -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
     &:hover {
       border: none !important;
     }
     &.active {
-      background-color: #282923;
+      background-color: $window-dark-gray;
       border: none !important;
       color: white;
     }
