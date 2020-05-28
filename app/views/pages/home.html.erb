@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div style="margin: 2rem auto; width: 900px; background-color: #282923;">
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">something_else</a>
+      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">something_else</a>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <!-- CV TAB -->
+    <div class="tab-pane fade show active" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem; height: 80vh">
+      <div class="test-typed" style="color: orange; font-family: monospace;"></div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  </div>
+
+  <%= javascript_pack_tag 'typedContent' %>
+</div>

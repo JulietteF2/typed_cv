@@ -1,0 +1,21 @@
+#nav-tab {
+  border-bottom: none !important;
+  background-color: #6D6E6A;
+  .nav-item {
+    background-color: #42433E;
+    font-size: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #989898;
+    -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+    &:hover {
+      border: none !important;
+    }
+    &.active {
+      background-color: #282923;
+      border: none !important;
+      color: white;
+    }
+  }
+}
