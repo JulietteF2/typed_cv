@@ -7,11 +7,14 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <!-- Uncomment and add favicon -->
+    <%#= favicon_link_tag asset_path('memento-favicon.png') %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body style="background-color: #6D6E6A;">
+  <body style="background-image: url('../../assets/background.jpg'); background-size: 100vw 100vh; background-repeat: no-repeat;">
     <%= yield %>
 
     <%= javascript_pack_tag 'application' %>
+    <%= yield :after_js %>
   </body>
 </html>

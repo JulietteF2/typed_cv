@@ -1,23 +1,41 @@
+<div class="editor" style="margin: 1.5rem auto; width: 900px; background-color: #282923;">
 
-<div style="margin: 2rem auto; width: 900px; background-color: #282923;">
-
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
-      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">something_else</a>
-      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">something_else</a>
+  <div class="top-bar d-flex">
+    <div class="rounds d-flex p-1">
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #FF5F58; margin-right: 0.3rem;"></div>
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #FFBD2E; margin-right: 0.3rem"></div>
+      <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28C941"></div>
     </div>
-  </nav>
-
-  <div class="tab-content" id="nav-tabContent">
-    <!-- CV TAB -->
-    <div class="tab-pane fade show active" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem; height: 80vh">
-      <div class="test-typed" style="color: orange;"></div>
-    </div>
-
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    <div style="margin: 0 auto">online_cv_</div>
   </div>
 
-  <%= javascript_pack_tag 'typedContent' %>
+  <%= render 'components/left-side-bar' %>
+
+    <div class="main-window" style="width:80%">
+      <div class="wrapping-nav">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">something_else</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">something_else</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="tab-content" id="nav-tabContent">
+        <!-- CV TAB -->
+        <div class="tab-pane fade show active" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem; height: 80vh">
+          <div class="test-typed" style="color: orange;"></div>
+        </div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag 'typedContent' %>
+<% end %>

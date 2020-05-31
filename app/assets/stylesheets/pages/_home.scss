@@ -1,4 +1,14 @@
 // Specific CSS for your home-page
+.editor {
+  moz-box-shadow: inset 0px 0px 2px 0.5px white;
+  webkit-box-shadow: inset 0px 0px 2px 0.5px white;
+  box-shadow: inset 0px 0px 2px 0.5px white;
+  border: 0.5px solid #000;
+
+  border-radius: 8px;
+}
+
 .test-typed {
   font-family: $editor-font;
 }
+

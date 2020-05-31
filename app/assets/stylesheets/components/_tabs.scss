@@ -1,14 +1,19 @@
+.nav {
+  padding-top: 0.5rem;
+}
+
 #nav-tab {
+  width: 100%;
   border-bottom: none !important;
   background-color: $background-gray;
   .nav-item {
+    height: 32px;
     background-color: $tabs-mid-gray;
     font-size: 12px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 6px 24px;
     color: $tabs-font-gray;
-    -webkit-clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);
     &:hover {
       border: none !important;
     }
@@ -18,4 +23,13 @@
       color: white;
     }
   }
+}
+
+.wrapping-nav {
+  margin:0px 0px;
+  padding-right:2px;
+  background-color: #6D6E6A;
+  moz-box-shadow: inset 0px 0px 2px 0.5px white;
+  webkit-box-shadow: inset 0px 0px 2px 0.5px white;
+  box-shadow: inset 0px 0px 2px 0.5px white;
 }

@@ -3,7 +3,9 @@ import Typed from 'typed.js';
 
 var options = {
   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-  typeSpeed: 40
+  typeSpeed: 40,
+  smartBackspace: true
 };
 
 var typed = new Typed('.test-typed', options);
+
