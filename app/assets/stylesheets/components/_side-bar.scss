@@ -5,6 +5,13 @@
   border-bottom-left-radius: 8px;
   padding: 16px 14px;
 
+  a {
+    text-decoration: none;
+    :hover {
+      opacity: 0.7;
+    }
+  }
+
   .title {
     margin-top: 1rem;
     margin-bottom: 4px;
