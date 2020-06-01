@@ -10,5 +10,31 @@
 
 .test-typed {
   font-family: $editor-font;
+  p {
+    margin-bottom: 0;
+  }
 }
 
+.orange {
+  color: $orange;
+}
+
+.pink {
+  color: $pink;
+}
+
+.purple {
+  color: $purple;
+}
+
+.blue {
+  color: $blue;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.green {
+  color: $green;
+}
