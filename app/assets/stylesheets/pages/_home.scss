@@ -8,6 +8,10 @@
   border-radius: 8px;
 }
 
+.tab-pane {
+  overflow: scroll;
+}
+
 .test-typed {
   font-family: $editor-font;
   p {
