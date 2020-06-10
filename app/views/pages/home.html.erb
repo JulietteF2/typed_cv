@@ -25,12 +25,16 @@
       <div class="tab-content" id="nav-tabContent">
         <!-- CV TAB -->
         <div class="tab-pane fade show active" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem 2rem 1.5rem 1.5rem; height: 82vh">
-          <!-- <div class="js-test"></div> -->
-          <%= render 'components/test-main-content' %>
+          <%#= render 'components/test-main-content' %>
+          <div class="test-typed">
+            <p class="green">
+              <span id="intro"></span>
+            </p>
+          </div>
         </div>
 
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding: 1.5rem; height: 82vh">
-          <!-- <div class="js-test"></div> -->
+          <%#= render 'components/test-main-content' %>
         </div>
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
       </div>
@@ -38,6 +42,8 @@
 
   </div>
 </div>
+
+
 
 <%= content_for :after_js do %>
   <%= javascript_pack_tag 'typedContent' %>
