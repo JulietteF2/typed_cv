@@ -16,8 +16,8 @@
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">something_else</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">something_else</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">non_tech_people_friendly_cv.pdf</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">let_s_chat.rb</a>
           </div>
         </nav>
       </div>
@@ -30,13 +30,18 @@
             <p class="green">
               <span id="intro"></span>
             </p>
+            <br>
+            <%= render 'toggled-content' %>
           </div>
         </div>
 
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding: 1.5rem; height: 82vh">
-          <%#= render 'components/test-main-content' %>
+          <object width="100%" height="100%" data="../../assets/html_cv.pdf" type="application/pdf">.pdf version of CV</object>
         </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <%= render 'mailer' %>
+        </div>
       </div>
     </div>
 
