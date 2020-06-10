@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+a:hover {
+  text-decoration: none !important;
+}
+
+
 .editor {
   moz-box-shadow: inset 0px 0px 2px 0.5px white;
   webkit-box-shadow: inset 0px 0px 2px 0.5px white;
@@ -8,7 +13,37 @@
   border-radius: 8px;
 }
 
-.test-typed {
-  font-family: $editor-font;
+.tab-pane {
+  overflow: scroll;
 }
 
+.test-typed {
+  font-family: $editor-font;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.orange {
+  color: $orange;
+}
+
+.pink {
+  color: $pink;
+}
+
+.purple {
+  color: $purple;
+}
+
+.blue {
+  color: $blue;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.green {
+  color: $green;
+}
