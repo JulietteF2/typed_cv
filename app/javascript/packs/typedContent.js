@@ -10,14 +10,29 @@ var options = {
   </span><p></p>
   <span class="pink" style="margin-left: 1rem">end</span><p></p>
   </br>
-  <span style="color: #74705C;"><i># Let's stop the typing effect for a bit...</i></span`],
+  <span style="color: #74705C;"><i># Let's stop the typing effect for a bit...</i></span> &nbsp;&nbsp;&nbsp; <span class="blue" id="toggle"><i><a href="">click here to toggle the rest.</a></i></span>`],
 
   typeSpeed: 30,
   smartBackspace: false,
   showCursor: true,
   cursorChar: '|',
-  autoInsertCss: true
+  autoInsertCss: true,
+  onComplete: (self) => {
+    createToggle();
+  }
 };
+
+const createToggle = () => {
+  document.getElementById('toggle').addEventListener('click', (e) => {
+    e.preventDefault();
+    removeCursor();
+    document.getElementById('toggled').classList.remove('d-none');
+  })
+}
+
+const removeCursor = () => {
+  document.querySelector('.typed-cursor').innerHTML = ''
+}
 
 var typed = new Typed('#intro', options);
 
