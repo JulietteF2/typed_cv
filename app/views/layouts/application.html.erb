@@ -12,6 +12,10 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body style="background-image: url('../../assets/background.jpg'); background-repeat: no-repeat;">
+    <div class="flash">
+      <%= render 'components/flashes' %>
+    </div>
+
     <%= yield %>
 
     <%= javascript_pack_tag 'application' %>

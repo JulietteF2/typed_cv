@@ -15,7 +15,7 @@
       <div class="wrapping-nav">
         <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
+            <a class="nav-item nav-link" id="nav-cv-tab" data-toggle="tab" href="#nav-cv" role="tab" aria-controls="nav-cv" aria-selected="true">juliette_ferrer_cv.html.erb</a>
             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">non_tech_people_friendly_cv.pdf</a>
             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">let_s_chat.rb</a>
           </div>
@@ -24,14 +24,14 @@
 
       <div class="tab-content" id="nav-tabContent">
         <!-- CV TAB -->
-        <div class="tab-pane fade show active" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem 2rem 1.5rem 1.5rem; height: 82vh">
+        <div class="tab-pane fade" id="nav-cv" role="tabpanel" aria-labelledby="nav-cv-tab" style="padding: 1.5rem 2rem 1.5rem 1.5rem; height: 82vh">
           <%#= render 'components/test-main-content' %>
           <div class="test-typed">
             <p class="green">
               <span id="intro"></span>
             </p>
             <br>
-            <%= render 'toggled-content' %>
+            <%= render 'components/toggled-content' %>
           </div>
         </div>
 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-          <%= render 'mailer' %>
+          <%= render 'components/mailer' %>
         </div>
       </div>
     </div>
@@ -48,7 +48,17 @@
   </div>
 </div>
 
-
+<script>
+  if (window.location.href.endsWith('messages')) {
+    document.getElementById('nav-contact-tab').classList.add('active');
+    document.getElementById('nav-contact').classList.add('show');
+    document.getElementById('nav-contact').classList.add('active');
+  } else {
+    document.getElementById('nav-cv-tab').classList.add('active');
+    document.getElementById('nav-cv').classList.add('show');
+    document.getElementById('nav-cv').classList.add('active');
+  }
+</script>
 
 <%= content_for :after_js do %>
   <%= javascript_pack_tag 'typedContent' %>

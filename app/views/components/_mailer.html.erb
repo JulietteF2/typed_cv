@@ -1,0 +1,8 @@
+<p>Insert simple_form for mailer</p>
+
+<%= simple_form_for @message do |f| %>
+  <%= f.input :email, label: 'Your email please' %>
+  <%= f.input :name %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>
