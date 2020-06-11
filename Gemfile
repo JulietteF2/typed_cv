@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'invisible_captcha'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
