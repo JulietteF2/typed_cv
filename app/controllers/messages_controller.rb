@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
 
-  def new
-    @message = Message.new
+  def index
+    redirect_to root_path
   end
 
   def create
@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Thanks! I'll get back to you soon"
     else
       render 'pages/home'
-      flash[:alert] = "Mail not valid"
+      flash[:alert] = "Something went wrong... Try again"
     end
   end
 
