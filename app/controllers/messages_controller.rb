@@ -1,6 +1,10 @@
 class MessagesController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
 
+  def index
+    redirect_to root_path
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.save
