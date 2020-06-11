@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
   end
 
   def mailing_message(message)
-    MessageMailer.with(message: message).confirm.deliver_now
-    MessageMailer.with(message: message).forward.deliver_now
+    MessageMailer.with(message: message).confirm.deliver_later
+    MessageMailer.with(message: message).forward.deliver_later
   end
 end
