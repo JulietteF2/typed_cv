@@ -1,0 +1,76 @@
+.mailer {
+  padding: 2rem;
+  font-family: $editor-font;
+  font-size: 14px;
+}
+
+.new_message {
+  padding: 0 2rem 0 2rem;
+  .message_email {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 2;
+    label {
+      padding-right: 1rem;
+      padding-left: 2rem;
+      margin-bottom: 0;
+      color: $green;
+    }
+  }
+  .message_name {
+    display: flex;
+    align-items: flex-end;
+    label {
+      padding-right: 1rem;
+      margin-bottom: 0;
+      color: $green;
+    }
+  }
+  .message_object {
+    display: flex;
+    align-items: flex-end;
+    label {
+      padding-right: 1rem;
+      margin-bottom: 0;
+      color: $pink;
+    }
+  }
+  .message_content {
+    margin-top: 2rem;
+    label {
+      color: $orange;
+      margin-bottom: 0;
+    }
+    textarea {
+      height: 10rem;
+      border-right: solid 1px $tabs-mid-gray;
+    }
+  }
+
+  .form-control {
+    background-color: inherit;
+    border-radius: 0px;
+    border: none;
+    border-bottom: solid 1px $tabs-mid-gray;
+    color: white;
+
+    position: relative;
+    bottom: -2px;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 14px;
+    color: $green;
+    text-align: start;
+    margin-top: 1rem;
+    background-color: $tabs-mid-gray;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    transition: transform ease 1s;
+  }
+  .btn:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  }
+}

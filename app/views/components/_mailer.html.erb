@@ -1,8 +1,13 @@
-<p>Insert simple_form for mailer</p>
+<div class="mailer">
+  <p class="green">Want to start <span class="pink">collaborating</span>, or just have a <span class="pink">chat</span>? Leave me a message <span class="orange">below</span>! </p>
 
-<%= simple_form_for @message do |f| %>
-  <%= f.input :email, label: 'Your email please' %>
-  <%= f.input :name %>
-  <%= f.input :content %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for @message do |f| %>
+    <div class="d-flex">
+      <%= f.input :name, required: false %>
+      <%= f.input :email, required: false %>
+    </div>
+    <%= f.input :object, required: false %>
+    <%= f.input :content, required: false, as: :text %>
+    <%= f.button :submit, value: 'Send your message' %>
+  <% end %>
+</div>
