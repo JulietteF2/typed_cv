@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      mailing_message(@message)
       redirect_to root_path
       flash[:notice] = "Thanks! I'll get back to you soon"
     else
@@ -20,5 +21,10 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:email, :name, :object, :content)
+  end
+
+  def mailing_message(message)
+    MessageMailer.with(message: message).confirm.deliver_now
+    MessageMailer.with(message: message).forward.deliver_now
   end
 end
