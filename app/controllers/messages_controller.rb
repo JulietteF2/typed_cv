@@ -1,10 +1,6 @@
 class MessagesController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
 
-  def new
-    @message = Message.new
-  end
-
   def create
     @message = Message.new(message_params)
     if @message.save
@@ -12,7 +8,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Thanks! I'll get back to you soon"
     else
       render 'pages/home'
-      flash[:alert] = "Mail not valid"
+      flash[:alert] = "Something went wrong... Try again"
     end
   end
 

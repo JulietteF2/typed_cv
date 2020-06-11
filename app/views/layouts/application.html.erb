@@ -18,6 +18,16 @@
 
     <%= yield %>
 
+    <script>
+      const removeAlert = (flashAlert) => { flashAlert.parentNode.innerHTML = ''; }
+
+      if ( document.querySelector('.alert') ) {
+        document.addEventListener('click', (e) => {
+          removeAlert(document.querySelector('.alert'))
+        })
+      }
+    </script>
+
     <%= javascript_pack_tag 'application' %>
     <%= yield :after_js %>
   </body>
