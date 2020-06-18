@@ -58,6 +58,13 @@
     document.getElementById('nav-cv').classList.add('show');
     document.getElementById('nav-cv').classList.add('active');
   }
+
+  // happy to chat linking to tab
+  let chatLink = document.getElementById('link-to-tab');
+  chatLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('nav-contact-tab').click();
+  })
 </script>
 
 <%= content_for :after_js do %>
