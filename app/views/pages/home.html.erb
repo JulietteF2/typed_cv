@@ -37,11 +37,14 @@
         </div>
 
         <div class="tab-pane fade pdf" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding: 1.5rem;">
-          <object width="100%" height="100%" data="https://res.cloudinary.com/julietteferrer27/image/upload/v1592895552/20.06_ENG_Online_CV_imjbvd.pdf" type="application/pdf">.pdf version of CV</object>
+          <object width="100%" height="100%" data="https://res.cloudinary.com/julietteferrer27/image/upload/v1592895552/20.06_ENG_Online_CV_imjbvd.pdf" type="application/pdf"><p style="color: white">Oops, looks like your browser doesn't support embedded PDF!</p>
+          <p style="color: white">Download the file here: <a href="https://drive.google.com/file/d/1KCldxiMEWJk5CsK5HuUoorGyGBstlv66/view?usp=sharing" target="_blank">Link</a></p>
+          </object>
         </div>
 
         <div class="tab-pane fade pdf" id="nav-french" role="tabpanel" aria-labelledby="nav-french-tab" style="padding: 1.5rem;">
-          <object width="100%" height="100%" data="https://res.cloudinary.com/julietteferrer27/image/upload/v1592895552/20.06_FR_Online_CV_ffeakj.pdf" type="application/pdf">.pdf version of CV</object>
+          <object width="100%" height="100%" data="https://res.cloudinary.com/julietteferrer27/image/upload/v1592895552/20.06_FR_Online_CV_ffeakj.pdf" type="application/pdf"><p style="color: white">Oops, looks like your browser doesn't support embedded PDF!</p>
+          <p style="color: white">Download the file here: <a href="https://drive.google.com/file/d/1U_hdMOxB0RkS3ztabp892NfC57WtsdlY/view?usp=sharing" target="_blank">Link</a></p></object>
         </div>
 
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -70,6 +73,17 @@
     e.preventDefault();
     document.getElementById('nav-contact-tab').click();
   })
+
+  // adapt pdf tabs to iphones
+  let frTab = document.getElementById("nav-french");
+  let engTab = document.getElementById("nav-profile");
+
+  if ( window.navigator.userAgent.includes("iPhone") ) {
+    engTab.innerHTML = `<p style="color: white">Oops, looks like your browser doesn't support embedded PDF!</p>
+          <p style="color: white">Download the file here: <a href="https://drive.google.com/file/d/1KCldxiMEWJk5CsK5HuUoorGyGBstlv66/view?usp=sharing" target="_blank">Link</a></p>`
+    frTab.innerHTML = `<p style="color: white">Oops, looks like your browser doesn't support embedded PDF!</p>
+          <p style="color: white">Download the file here: <a href="https://drive.google.com/file/d/1U_hdMOxB0RkS3ztabp892NfC57WtsdlY/view?usp=sharing" target="_blank">Link</a></p>`
+  }
 </script>
 
 <%= content_for :after_js do %>
