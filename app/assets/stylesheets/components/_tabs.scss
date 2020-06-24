@@ -1,3 +1,41 @@
+@media(min-width: 992px) {
+  .tab-content {
+    height: 82vh;
+  }
+  #nav-tab {
+    .nav-item {
+      padding: 6px 24px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .tab-content {
+    height: 70vh;
+    overflow: scroll;
+  }
+  #nav-tab {
+    .nav-item {
+      padding: 6px 24px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .tab-content {
+    height: 70vh;
+    overflow: scroll;
+  }
+  #nav-tab {
+    .nav-item {
+      padding: 6px 16px;
+      font-size: 10px;
+    }
+  }
+}
+
 .nav {
   padding-top: 0.5rem;
 }
@@ -9,8 +47,6 @@
   .nav-item {
     height: 32px;
     background-color: $tabs-mid-gray;
-    font-size: 12px;
-    padding: 6px 24px;
     color: $tabs-font-gray;
     -webkit-clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(6% 0%, 94% 0%, 100% 100%, 0% 100%);

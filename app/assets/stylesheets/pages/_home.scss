@@ -1,4 +1,20 @@
 // Specific CSS for your home-page
+@media(min-width: 992px) {
+  .editor {
+    width: 900px;
+  }
+}
+
+@media(max-width: 991px) {
+  .editor {
+    width: 98vw;
+    max-height: 98vh;
+    .tab-pane {
+      padding-bottom: 0px !important;
+    }
+  }
+}
+
 .typed-cursor {
   color: white;
 }
@@ -13,12 +29,15 @@ a:hover {
   webkit-box-shadow: inset 0px 0px 2px 0.5px white;
   box-shadow: inset 0px 0px 2px 0.5px white;
   border: 0.5px solid #000;
-
-  border-radius: 8px;
 }
 
 .tab-pane {
   overflow: scroll;
+}
+
+.pdf {
+  height: 100%;
+  padding: 0px;
 }
 
 .test-typed {

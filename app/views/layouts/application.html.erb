@@ -11,13 +11,19 @@
     <%= favicon_link_tag asset_path('sublime_text_icon.png') %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body style="background-image: url('https://res.cloudinary.com/julietteferrer27/image/upload/v1592467167/background_zn5mzp.jpg'); background-repeat: no-repeat;">
+  <body>
+
+    <div style="width: 100vw; height: 100vh; background-image: url('https://res.cloudinary.com/julietteferrer27/image/upload/v1592467167/background_zn5mzp.jpg'); background-size: cover; background-repeat: no-repeat; position: fixed;">
+
     <div class="flash">
       <%= render 'components/flashes' %>
     </div>
 
-    <%= yield %>
+    <div class="d-none flip" style="width: 95vw; height: 95vh; background-image: url('https://res.cloudinary.com/julietteferrer27/image/upload/v1592925071/rotate_dn7jnm_bj2uke.gif'); background-size: cover; background-repeat: no-repeat; z-index: 2; margin: 2.5vh 2.5vw; position: absolute;">
+    </div>
 
+    <%= yield %>
+    </div>
     <script>
       const removeAlert = (flashAlert) => { flashAlert.parentNode.innerHTML = ''; }
 
@@ -26,6 +32,41 @@
           removeAlert(document.querySelector('.alert'))
         })
       }
+
+      // checking phone orientation and displaying alert
+      let alertDiv = document.querySelector(".flip");
+      const toggleAlert = (phoneOrientation) => {
+        if (phoneOrientation) {
+          alertDiv.classList.remove("d-none");
+        } else {
+          alertDiv.classList.add("d-none");
+        }
+      };
+
+      const checkHeightWidth = () => {
+        if (window.innerHeight > window.innerWidth) {
+          toggleAlert(true);
+        } else {
+          toggleAlert(false);
+        };
+      }
+
+      let previousOrientation = window.screen.orientation.angle;
+      const checkOrientation = () => {
+        if ( window.screen.orientation.angle !== previousOrientation ) {
+          previousOrientation = window.screen.orientation.angle;
+          if ( previousOrientation == 90 ) {
+            toggleAlert(false);
+          } else if ( previousOrientation == -90 ) {
+            toggleAlert(false);
+          } else {
+            toggleAlert(true);
+          }
+        };
+      };
+
+      checkHeightWidth();
+      setInterval(checkOrientation, 200);
     </script>
 
     <%= javascript_pack_tag 'application' %>
