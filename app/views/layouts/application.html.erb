@@ -51,18 +51,12 @@
         };
       }
 
-      let previousOrientation = window.screen.orientation.angle;
       const checkOrientation = () => {
-        if ( window.screen.orientation.angle !== previousOrientation ) {
-          previousOrientation = window.screen.orientation.angle;
-          if ( previousOrientation == 90 ) {
-            toggleAlert(false);
-          } else if ( previousOrientation == -90 ) {
-            toggleAlert(false);
-          } else {
-            toggleAlert(true);
-          }
-        };
+        if ( window.matchMedia("(orientation: portrait)").matches ) {
+          toggleAlert(true);
+        } else {
+          toggleAlert(false);
+        }
       };
 
       checkHeightWidth();
